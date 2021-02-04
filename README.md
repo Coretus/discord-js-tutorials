@@ -15,3 +15,74 @@ Usted esta por ver código(script) del lenguaje de programación JavaScript (JS)
 
 Sobre el copiar y pegar
 Recomendamos firmemente escribir el código a mano mientras sigues los capítulos de esta guía, sin copiar y pegar. Esto te ayudará a desarrollar una memoria muscular y un entendimiento de lo que estás agregando mucho más sólido.
+
+
+Preguntas Frecuentes
+Estas son preguntas que se hacen con frecuencia en el servidor de soporte en Discord MyBOT Team, si tiene problemas que no figuran en esta sección, pregunte en el servidor de Discord para poder ayudarlo con su consulta.
+
+¿Por qué me aparece un error en la última línea de mi código?
+1
+Error: Unexpected token )
+2
+​
+
+Respuesta: este error suele pasar porque no cerraste bien algún comando anterior, fíjate si te faltó algún paréntesis ) o alguna llave } o corchete ] por cerrar, este error suele ser muy común cuando estás empezando.
+
+
+¿Por qué me aparece este error en mi consola cuando ejecuto mi bot?
+1
+message is not defined
+2
+​
+Respuesta: es por que no has definido o puesto dentro del evento message.
+
+
+¿Por qué me aparece este error en mi consola cuando ejecuto mi bot?
+1
+args is not defined
+2
+​
+Respuesta: es porque no has definido la variable 'args' dentro del evento message. Ir al capítulo
+
+
+¿Cómo puedo hacer que solo yo pueda usar X comando?
+1
+//Respuesta:
+2
+if (message.author.id !== 'IDUSUARIO') return;
+3
+​
+4
+​
+Agregamos esta condicional dentro de un comando para validar que solo pueda ser usado por el usuario que fue agregando en 'IDUSUARO'.
+
+
+¿Cómo puedo enviar un mensaje con el BOT al privado(MD) de un usuario?
+1
+//Respuesta:
+2
+client.users.cache.get('IDUSUARIO').send('MENSAJE')
+3
+​
+4
+​
+Usamos la colección client.users y usando el método get(), ingresamos el id del usuario 'IDUSUARO', para luego usando el método send() enviar el mensaje.
+
+
+¿Cómo puedo enviar un mensaje a un canal determinado?
+1
+//Respuesta:
+2
+client.channels.cache.get('IDCANAL').send('MENSAJE A ENVIAR');
+3
+​
+4
+​
+Usamos la colección client.channels y usando el método get(), ingresamos el id del canal 'IDCANAL', para luego usando el método send() enviar el mensaje determinado.
+
+
+¿Cómo puedo hacer que en mi bot funcione la reproducción de audio/musica?
+Instale FFMPEG.
+Para windows: npm install ffmpeg-binaries
+Para Ubuntu: sudo apt install ffmpeg
+
